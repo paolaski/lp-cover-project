@@ -1,98 +1,133 @@
-.vinyl-c{
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    justify-content: center;
-}
-
-.vinyl-c .cover-c .cover-img{
-    display: flex;
-    z-index: 0;
-    border-radius: 5px;
-    box-shadow: rgb(0,0,0,20%) 10px 10px 20px;
-}
-
-.vinyl-c .disc-c{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: -10;
-    border-radius: 50%;
-    width: 390px;
-    height: 390px;
-    background-image: radial-gradient(#3C3C3C 0%, black 90%);
-    border: 5px solid lightgray;
-    -ms-animation:desplazarDisco 5s linear infinite;
-    -webkit-animation:desplazarDisco 5s linear infinite;
-    -moz-animation:desplazarDisco 5s linear infinite;
-    animation:desplazarDisco 5s linear infinite;
-}
-
-.vinyl-c .disc-c .cookie{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    background-image: url("https://img.discogs.com/hrSUlABvryL1FMh19911PzA4vVw=/fit-in/448x448/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-474703-1459203378-5447.jpeg.jpg");
-    background-size: 200px;
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    border: 5px solid white;
-    -ms-animation:rotarDisco 5s linear infinite;
-    -webkit-animation:rotarDisco 5s linear infinite;
-    -moz-animation:rotarDisco 5s linear infinite;
-    animation:rotarDisco 5s linear infinite;
-}
-
-.vinyl-c .disc-c .hole{
-    display: flex;
-    width: 70px;
-    height: 70px;
-    background-color: white;
-    border-radius: 45px;
-    border: 5px solid black;
-}
-
-@keyframes rotarDisco {
-    from{
-        -ms-transform: rotate(0deg); 
-        -moz-transform: rotate(0deg); 
-        -webkit-transform: rotate(0deg); 
-        transform: rotate(0deg); 
+/* Media Queries */
+@media (max-width: 600px) {
+    .vinyl-c {
+      margin-top: 210px;
+      -ms-transform: rotate(90deg); 
+      -moz-transform: rotate(90deg); 
+      -webkit-transform: rotate(90deg); 
+      transform: rotate(90deg); 
     }
-    10%{
-        -ms-transform: rotate(60deg); 
-        -moz-transform: rotate(60deg); 
-        -webkit-transform: rotate(60deg); 
-        transform: rotate(60deg); 
-    }
-    60%{
-        -ms-transform: rotate(-360deg); 
-        -moz-transform: rotate(-360deg); 
-        -webkit-transform: rotate(-360deg); 
-        transform: rotate(-360deg); 
-    }
-    to{
-        -ms-transform: rotate(0deg); 
-        -moz-transform: rotate(0deg); 
-        -webkit-transform: rotate(0deg); 
-        transform: rotate(0deg); 
-    }
-  }
-
-  @keyframes desplazarDisco {
-    from{
-        transform:translate(0,0);
-    }
-    10%{
-        transform:translate(15px,0);
-    }
-    60%{
-        transform:translate(-390px,0);
-    }
-    to{
-        transform:translate(0,0);
+    
+    .vinyl-c .cover-c .cover-img{
+      -ms-transform: rotate(270deg); 
+      -moz-transform: rotate(270deg); 
+      -webkit-transform: rotate(270deg); 
+      transform: rotate9(270deg); 
     }
   }
   
+  /* Styles */ 
+  .vinyl-c{
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .vinyl-c .cover-c .cover-img{
+      display: flex;
+      z-index: 0;
+      border-radius: 5px;
+      box-shadow: rgb(0,0,0,20%) 10px 10px 20px;
+  }
+  
+  .vinyl-c .disc-c{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: -10;
+      border-radius: 50%;
+      min-width: 390px;
+      min-height: 390px;
+      background-image: radial-gradient(#3C3C3C 0%, black 90%);
+      border: 5px solid lightgray;
+      -ms-animation: desplazarDisco 5s linear infinite;
+      -webkit-animation: desplazarDisco 5s linear infinite;
+      -moz-animation: desplazarDisco 5s linear infinite;
+      animation: desplazarDisco 5s linear infinite;
+  }
+  
+  .vinyl-c .disc-c .cookie{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+      background-image: url("https://img.discogs.com/hrSUlABvryL1FMh19911PzA4vVw=/fit-in/448x448/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-474703-1459203378-5447.jpeg.jpg");
+      background-size: 180px;
+      border-radius: 50%;
+      width: 180px;
+      height: 180px;
+      border: 5px solid white;
+      -ms-animation: rotarDisco 5s linear infinite;
+      -webkit-animation: rotarDisco 5s linear infinite;
+      -moz-animation: rotarDisco 5s linear infinite;
+      animation: rotarDisco 5s linear infinite;
+  }
+  
+  .vinyl-c .disc-c .hole{
+      display: flex;
+      width: 60px;
+      height: 60px;
+      background-color: white;
+      border-radius: 45px;
+      border: 3px solid black;
+  }
+  
+  /* Animations */
+  
+  @keyframes rotarDisco {
+    /* Rotation */
+      from{
+          -ms-transform: rotate(0deg); 
+          -moz-transform: rotate(0deg); 
+          -webkit-transform: rotate(0deg); 
+          transform: rotate(0deg); 
+      }
+      10%{
+          -ms-transform: rotate(60deg); 
+          -moz-transform: rotate(60deg); 
+          -webkit-transform: rotate(60deg); 
+          transform: rotate(60deg); 
+      }
+      60%{
+          -ms-transform: rotate(-360deg); 
+          -moz-transform: rotate(-360deg); 
+          -webkit-transform: rotate(-360deg); 
+          transform: rotate(-360deg); 
+      }
+      to{
+          -ms-transform: rotate(0deg); 
+          -moz-transform: rotate(0deg); 
+          -webkit-transform: rotate(0deg); 
+          transform: rotate(0deg); 
+      }
+    }
+  
+    @keyframes desplazarDisco {
+      /* To Right and Left */
+      from{
+        -ms-transform: translate(0,0);
+        -moz-transform: translate(0,0);
+        -webkit-transform: translate(0,0);
+        transform: translate(0,0);
+      }
+      10%{
+        -ms-transform: translate(15px,0);
+        -moz-transform: translate(15px,0);
+        -webkit-transform: translate(15px,0);
+        transform: translate(15px,0);
+      }
+      60%{
+        -ms-transform: translate(-360px,0);
+        -moz-transform: translate(-360px,0);
+        -webkit-transform: translate(-360px,0);
+        transform: translate(-360px,0);
+      }
+      to{
+        -ms-transform: translate(0,0);
+        -moz-transform: translate(0,0);
+        -webkit-transform: translate(0,0);
+        transform: translate(0,0);
+      }
+    }
+    
